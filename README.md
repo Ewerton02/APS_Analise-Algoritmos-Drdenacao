@@ -1,86 +1,86 @@
-# Sistema de Análise de Performance de Algoritmos de Ordenação
+# Sorting Algorithm Performance Analysis System
 
-> Análise comparativa de algoritmos de ordenação aplicados a dados reais de queimadas no estado de Alagoas (2023-2024)
+> Comparative analysis of sorting algorithms applied to real wildfire data from the state of Alagoas, Brazil (2023-2024)
 
 [![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)]()
-[![UNIP](https://img.shields.io/badge/UNIP-Ciência_da_Computação-red)]()
+[![UNIP](https://img.shields.io/badge/UNIP-Computer_Science-red)]()
 
-## 📖 Sobre o Projeto
+## 📖 About the Project
 
-Sistema desenvolvido como Atividade Prática Supervisionada (APS) do curso de Ciências da Computação da UNIP, implementando e comparando três algoritmos clássicos de ordenação:
+System developed as a Supervised Practical Activity (APS) for the Computer Science program at UNIP, implementing and comparing three classic sorting algorithms:
 
 - **Bubble Sort** (O(n²))
 - **Quick Sort** (O(n log n))
 - **Heap Sort** (O(n log n))
 
-### Objetivo
+### Objective
 
-Analisar a performance dos algoritmos através da contagem de iterações e trocas ao ordenar 512 registros de focos de incêndio.
+Analyze algorithm performance by counting iterations and swaps when sorting 512 wildfire hotspot records.
 
-## 🔥 Dados Utilizados
+## 🔥 Dataset
 
-- **Fonte**: Instituto Nacional de Pesquisas Espaciais (INPE)
-- **Período**: 2023-2024
-- **Região**: Estado de Alagoas
-- **Total de registros**: 512 focos de queimadas
+- **Source**: National Institute for Space Research (INPE)
+- **Period**: 2023-2024
+- **Region**: State of Alagoas, Brazil
+- **Total records**: 512 wildfire hotspots
 
-## 📊 Resultados
+## 📊 Results
 
-### Comparação de Performance
+### Performance Comparison
 
-| Algoritmo    | Critério    | Iterações | Trocas  |
-|--------------|-------------|-----------|---------|
-| Bubble Sort  | Bioma       | 130.816   | 19.845  |
-| Bubble Sort  | Município   | 130.816   | 61.588  |
-| Bubble Sort  | Data        | 130.816   | 51.329  |
-| Quick Sort   | Bioma       | 84.835    | 627     |
-| Quick Sort   | Município   | 7.500     | 2.268   |
-| Quick Sort   | Data        | 44.960    | 44.332  |
-| Heap Sort    | Bioma       | 2.154     | 1.898   |
-| Heap Sort    | Município   | 4.428     | 4.172   |
-| Heap Sort    | Data        | 4.653     | 4.397   |
+| Algorithm    | Criterion   | Iterations | Swaps   |
+|--------------|-------------|------------|---------|
+| Bubble Sort  | Biome       | 130,816    | 19,845  |
+| Bubble Sort  | Municipality| 130,816    | 61,588  |
+| Bubble Sort  | Date        | 130,816    | 51,329  |
+| Quick Sort   | Biome       | 84,835     | 627     |
+| Quick Sort   | Municipality| 7,500      | 2,268   |
+| Quick Sort   | Date        | 44,960     | 44,332  |
+| Heap Sort    | Biome       | 2,154      | 1,898   |
+| Heap Sort    | Municipality| 4,428      | 4,172   |
+| Heap Sort    | Date        | 4,653      | 4,397   |
 
-**Conclusão**: O Heap Sort apresentou o melhor desempenho, seguido pelo Quick Sort. O Bubble Sort mostrou-se inviável para grandes volumes de dados.
+**Conclusion**: Heap Sort delivered the best overall performance, followed by Quick Sort. Bubble Sort proved impractical for large datasets.
 
-## 🚀 Como Executar
+## 🚀 Getting Started
 
-### Pré-requisitos
+### Prerequisites
 
-- Compilador C (GCC, MinGW ou similar)
-- Sistema operacional Windows (devido ao `windows.h`)
+- C compiler (GCC, MinGW, or similar)
+- Windows OS (required due to `windows.h`)
 
-### Compilação
+### Compilation
 ```bash
-gcc APS2.c -o sistema_ordenacao
+gcc APS2.c -o sorting_system
 ```
 
-### Execução
+### Execution
 ```bash
-./sistema_ordenacao
+./sorting_system
 ```
 
-### Menu de Opções
+### Menu Options
 ```
-1 - Ordenar por Bioma (Quick Sort)
-2 - Ordenar por Município (Quick Sort)
-3 - Ordenar por Data (Quick Sort)
-4 - Ordenar por Bioma (Bubble Sort)
-5 - Ordenar por Município (Bubble Sort)
-6 - Ordenar por Data (Bubble Sort)
-7 - Ordenar por Bioma (Heap Sort)
-8 - Ordenar por Município (Heap Sort)
-9 - Ordenar por Data (Heap Sort)
-0 - Sair
+1 - Sort by Biome (Quick Sort)
+2 - Sort by Municipality (Quick Sort)
+3 - Sort by Date (Quick Sort)
+4 - Sort by Biome (Bubble Sort)
+5 - Sort by Municipality (Bubble Sort)
+6 - Sort by Date (Bubble Sort)
+7 - Sort by Biome (Heap Sort)
+8 - Sort by Municipality (Heap Sort)
+9 - Sort by Date (Heap Sort)
+0 - Exit
 ```
 
-## 💻 Tecnologias Utilizadas
+## 💻 Tech Stack
 
-- **Linguagem**: C
+- **Language**: C
 - **IDE**: Code::Blocks
-- **Codificação**: UTF-8
-- **Sistema**: Windows
+- **Encoding**: UTF-8
+- **OS**: Windows
 
-## 📚 Estrutura do Código
+## 📚 Code Structure
 ```c
 typedef struct {
     int id_bdq;
@@ -94,33 +94,33 @@ typedef struct {
 } Foco;
 ```
 
-### Principais Funções
+### Main Functions
 
-- `bubble_sort()` - Implementação do Bubble Sort
-- `quick_sort()` - Implementação do Quick Sort
-- `heap_sort()` - Implementação do Heap Sort
-- `carregar_csv()` - Leitura dos arquivos CSV
-- `exibir_focos()` - Exibição formatada dos dados
+- `bubble_sort()` - Bubble Sort implementation
+- `quick_sort()` - Quick Sort implementation
+- `heap_sort()` - Heap Sort implementation
+- `carregar_csv()` - CSV file loader
+- `exibir_focos()` - Formatted data display
 
-## 👥 Equipe
+## 👥 Team
 
-- **Eric Takashi Katayama** - RA: G7553I7
-- **José Ewerton Alves dos Santos** - RA: G70JCI9
-- **Mariana Kobori Gabrielli** - RA: R192512
-- **Gabriel Hamad Passos Andrade** - RA: G73GHC3
+- **Eric Takashi Katayama** - ID: G7553I7
+- **José Ewerton Alves dos Santos** - ID: G70JCI9
+- **Mariana Kobori Gabrielli** - ID: R192512
+- **Gabriel Hamad Passos Andrade** - ID: G73GHC3
 
-**Instituição**: Universidade Paulista (UNIP)  
-**Curso**: Ciências da Computação  
-**Ano**: 2025
+**Institution**: Universidade Paulista (UNIP)  
+**Program**: Computer Science  
+**Year**: 2025
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 📧 Contato
+## 📧 Contact
 
-Para dúvidas ou sugestões, entre em contato através do GitHub.
+For questions or suggestions, reach out via GitHub.
 
 ---
 
-⭐ Se este projeto foi útil, considere dar uma estrela!
+⭐ If this project was helpful, consider giving it a star!
